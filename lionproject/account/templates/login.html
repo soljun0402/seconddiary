@@ -1,0 +1,13 @@
+<div style="text-align:center;">
+
+  <form action="{% url 'login'%}" method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <button type="submit">submit</button>
+    <br>
+    <br>
+    <a href="{% url 'cover'%}">홈으로</a>
+    <br>
+    <a href="{% url 'signup' %}">회원가입</a>
+  </form>
+</div>

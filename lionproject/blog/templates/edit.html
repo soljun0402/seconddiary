@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+
+{%block content %}
 <div style="text-align:center;">
   <h1>Update Your Blog</h1>
 
@@ -10,3 +13,4 @@
   </form>
   <a href="{% url 'detail' blog.id %}">취소</a>
 </div>
+{% endblock %}

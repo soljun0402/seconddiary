@@ -1,14 +1,21 @@
+{% extends 'base.html' %}
+
+{%block content %}
 <div style="text-align:center;">
 
-  <form action="{% url 'create'%}" method="post">
+  <form action="{% url 'create'%}" method="post" enctype="multipart/form-data">
   {%csrf_token%}
-    <p>제목</p>
+    <!-- <p>제목</p>
     <input type="text" name="title">
-    <!-- <p>작성자: <input type="text" name="writer"></p> -->
+    <p>작성자: <input type="text" name="writer"></p>
+    <p>이미지</p>
+    <input type="file" name = "image">
     <p>본문</p>
-    <textarea name="body" id="" cols="30" rows="10"></textarea>
+    <textarea name="body" id="" cols="30" rows="10"></textarea> -->
+    {{form.as_p}}
     <button type="submit">submit</button>
     <br>
     <a href="{% url 'home'%}">목차로 돌아가기</a>
   </form>
 </div>
+{% endblock %}
